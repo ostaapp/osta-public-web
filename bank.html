@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osta  - Unified Digital Payment Platform</title>
+    <link rel="icon" type="image/jpeg" href="./assets/logo.jpeg">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    
+    
+    <script>
+    function includeHTML() {
+      let z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain attribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function () {
+            if (this.readyState == 4) {
+              if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+              if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          return;
+        }
+      }
+    }
+  </script>
+  
+  
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <img src="./assets/logo.png" alt="Osta  Logo" height="50">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="index.html#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="index.html#services">Services</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link fw-medium" href="index.html#security">Security</a>
+                    </li>
+                   <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle fw-medium" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Domain
+  </a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="individual.html#individual">Individual</a></li>
+    <li><a class="dropdown-item" href="merchant.html#merchant">Merchant</a></li>
+        <li><a class="dropdown-item" href="bank.html#bank">Bank</a></li>
+    <li><a class="dropdown-item" href="offerings.html#Offerings">offering</a></li>
+  </ul>
+</li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="about.html#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="btn btn-primary px-4 py-2 ms-3" href="http://app.ostaapp.com/">Sign up / Login 🔐 </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100 pt-5">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <div class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-4">
+                            <i class="bi bi-wallet2 me-2"></i>
+                            Enterprise Digital Payment Platform
+                        </div>
+                        <h1 class="display-4 fw-bold text-dark mb-4">
+                            Unified Digital
+                            <span class="text-gradient">Payment Platform</span>
+                        </h1>
+                        <p class="lead text-muted mb-5">
+                            Enjoy most secured access to your money. Osta  enables seamless payments between merchant and customer by eliminating the need of cards/pin or bank provided credentials. Osta  is easier, safer, secure and faster than any other payment mode.
+                        </p>
+                        <div class="d-flex flex-column flex-sm-row gap-3">
+                            <a href="#contact" class="btn btn-primary btn-lg px-4 py-3 request-demo-btn">
+                                <span>Request Demo</span>
+                                <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                            <!--<a href="https://d2y9dp2ddutn2f.cloudfront.net/offering" class="btn btn-outline-secondary btn-lg px-4 py-3">-->
+                            <!--    View Documentation-->
+                            <!--</a>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-dashboard">
+                        <div class="dashboard-card bg-white rounded-4 shadow-lg p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h5 class="fw-bold text-success mb-0">Get the App now!</h5>
+                                <div class="d-flex gap-2">
+                                    <div class="dot bg-danger"></div>
+                                    <div class="dot bg-warning"></div>
+                                    <div class="dot bg-success"></div>
+                                </div>
+                            </div>
+                           <div class="row">
+                            <div class="col-md-6">
+                                
+                                <p class="text-dark mb-4">Pay, withdraw, recharge and even transfer money within bank accounts effortlessly with our app.</p>
+                                                                <p class="text-dark mb-4">Use Osta  to make utility payments,bill payments, mobile recharges, DTH recharges, adhoc payments to any merchants.</p>
+                                                                
+                                
+                                <div class="row g-3 mb-4">
+                                    <!--<div class="col-6">-->
+                                    <!--    <div class="d-flex align-items-center">-->
+                                    <!--        <span class="bg-success bg-opacity-20 rounded-circle p-2 me-2">💸</span>-->
+                                    <!--        <small>Instant Payments</small>-->
+                                    <!--    </div>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-6">-->
+                                    <!--    <div class="d-flex align-items-center">-->
+                                    <!--        <span class="bg-success bg-opacity-20 rounded-circle p-2 me-2">🔄</span>-->
+                                    <!--        <small>Bank Transfers</small>-->
+                                    <!--    </div>-->
+                                    <!--</div>-->
+                                    <div class="col-6">
+                                        <div class="d-flex align-items-center">
+                                            <span class="bg-success bg-opacity-20 rounded-circle p-2 me-2">⚡</span>
+                                            <small>Quick Recharge</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="d-flex align-items-center">
+                                            <span class="bg-success bg-opacity-20 rounded-circle p-2 me-2">🚕</span>
+                                            <small>FASTag</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex gap-3">
+                                    <a href="https://play.google.com/store/apps/details?id=com.osta.customer" target="_blank">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" height="48">
+                                    </a>
+                                    <a href="https://apps.apple.com/us/app/osta/id6443891632" target="_blank">
+                                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="48">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <img src="./assets/mobi.png" alt="App preview">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    
+
+
+
+
+
+<section id="bank"class="bank-section py-5 bg-light">
+  <div class="container">
+    <!-- Section Heading -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-primary">For Banks</h2>
+      <p class="text-muted">Osta  ’s secure and scalable solutions empower banks to grow while ensuring customer trust.</p>
+    </div>
+
+    <!-- Features Row -->
+    <div class="row g-4">
+      <!-- Enhanced Security -->
+      <div class="col-md-6">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+          <div class="d-flex align-items-center mb-3">
+            <i class="bi bi-shield-lock text-primary fs-2 me-3"></i>
+            <h5 class="fw-bold mb-0">Enhanced Security</h5>
+          </div>
+          <p class="text-muted">Osta  employs the lien-buy-debit methodology, ensuring zero risk to banks, merchants, and customers.</p>
+        </div>
+      </div>
+
+      <!-- Simplest APIfication -->
+      <div class="col-md-6">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+          <div class="d-flex align-items-center mb-3">
+            <i class="bi bi-diagram-3 text-primary fs-2 me-3"></i>
+            <h5 class="fw-bold mb-0">Simplest APIfication</h5>
+          </div>
+          <p class="text-muted">Easily integrate using secure bank APIs or ISO 8583 messages. Expand digital services and generate higher revenue.</p>
+        </div>
+      </div>
+
+      <!-- Maintain CASA -->
+      <div class="col-md-6">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+          <div class="d-flex align-items-center mb-3">
+            <i class="bi bi-bank text-primary fs-2 me-3"></i>
+            <h5 class="fw-bold mb-0">Maintain CASA & Revenue</h5>
+          </div>
+          <p class="text-muted">With no wallet transfers, CASA balances are maintained while customer spends increase float and revenue.</p>
+        </div>
+      </div>
+
+      <!-- One Stop Shop -->
+      <div class="col-md-6">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+          <div class="d-flex align-items-center mb-3">
+            <i class="bi bi-basket text-primary fs-2 me-3"></i>
+            <h5 class="fw-bold mb-0">One Stop Shop</h5>
+          </div>
+          <p class="text-muted">Offer services like FASTag, NCMC, and more—all via a single Osta  interface, eliminating prepaid systems.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Setup Process -->
+    <div class="mt-5">
+      <h4 class="fw-bold text-center mb-4">How to set-up?</h4>
+      <div class="row g-4 text-center">
+        <!-- Step 1 -->
+        <div class="col-md-4">
+          <div class="p-4 bg-secondary text-white rounded shadow-sm h-100">
+            <i class="bi bi-person-check fs-1 mb-3"></i>
+            <h5 class="fw-bold">Set-up</h5>
+            <p class="mb-0">Register with Osta  and get digitally approved in 24 hours.</p>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="col-md-4">
+          <div class="p-4 bg-primary text-white rounded shadow-sm h-100">
+            <i class="bi bi-link-45deg fs-1 mb-3"></i>
+            <h5 class="fw-bold">Integrate</h5>
+            <p class="mb-0">Seamlessly integrate your existing systems with Osta  .</p>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="col-md-4">
+          <div class="p-4 bg-success text-white rounded shadow-sm h-100">
+            <i class="bi bi-rocket-takeoff fs-1 mb-3"></i>
+            <h5 class="fw-bold">Deploy</h5>
+            <p class="mb-0">Follow the develop-test-deploy method to go live in no time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-6">
+                    <div class="footer-brand">
+                        <img src="./assets/Brontoo.png" alt="Osta  Logo" height="60" class="mb-3">
+                        <p class="text-light mb-4" style="text-align: justify;">
+                            Osta  is a cardless, walletless, swipeless, otpless solution. It is first of its kind frugal innovation - made in India for the world. Osta  acts as an aggregator / intermediary between Bank and Merchants to provide secured payment services similar to a payment gateway or POS based payments.
+                        </p>
+                       
+                    </div>
+                </div>
+                 <div class="col-lg-2">
+                    <h5 class="fw-semibold mb-3">Solutions</h5>
+                      <ul class="list-unstyled footer-links">
+                        <li><span class="text-light text-decoration-none">Banking</span></li>
+                        <li><span class="text-light text-decoration-none">Financial Institutions</span></li>
+                        <!--<li><span class="text-light text-decoration-none">Payment Aggregators</span></li>-->
+                        <li><span class="text-light text-decoration-none">Digital Wallets</span></li>
+                        <li><span class="text-light text-decoration-none">Enterprise</span></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2">
+                    <h5 class="fw-semibold mb-3">Platform</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><span class="text-light text-decoration-none">Smart Wallets</span></li>
+                        <li><span class="text-light text-decoration-none">CUG Cards</span></li>
+                        <li><span class="text-light text-decoration-none">Payment-on-Delivery</span></li>
+                        <!--<li><span class="text-light text-decoration-none">UPI Integration</span></li>-->
+                        <!--<li><span class="text-light text-decoration-none">API Documentation</span></li>-->
+                    </ul>
+                </div>
+               
+                <div class="col-lg-2">
+                    <h5 class="fw-semibold mb-3">Support</h5>
+                    <ul class="list-unstyled footer-links">
+                        <!--<li><a href="#" class="text-light text-decoration-none">Documentation</a></li>-->
+                        <!--<li><a href="#" class="text-light text-decoration-none">API Reference</a></li>-->
+                        <!--<li><a href="#" class="text-light text-decoration-none">Integration Guide</a></li>-->
+                        <!--<li><a href="#" class="text-light text-decoration-none">System Status</a></li>-->
+                        <li><a href="#" class="text-light text-decoration-none">Contact Support</a></li>
+                    </ul>
+                     <!--  <div class="social-links d-flex flex-column gap-3">
+                      
+                        <a href="mailto:contact@ostaapp.com"
+                            class="social-link bg-secondary rounded-3 p-2 d-flex align-items-center text-white text-decoration-none">
+                            <i class="bi bi-envelope me-2"></i><span
+                                style="margin-left: 13px;">contact@ostaapp.com</span>
+                        </a>
+                        
+                        <a href="tel:7776812308"
+                            class="social-link bg-secondary rounded-3 p-2 d-flex align-items-center text-white text-decoration-none">
+                            <i class="bi bi-telephone me-2"></i><span style="margin-left: 13px;">7776812308</span>
+                        </a>
+
+                    </div>-->
+                
+                        </div>
+                
+            </div>
+            
+            <div class="border-top border-secondary pt-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="text-light mb-0 small">
+                            © 2025 Osta  . All rights reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-legal d-flex justify-content-md-end gap-4">
+                            <button class="btn btn-link text-light p-0 small" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</button>
+                            <button class="btn btn-link text-light p-0 small" data-bs-toggle="modal" data-bs-target="#termsModal">Terms of Service</button>
+                            <!--<a href="#" class="text-light text-decoration-none small">Security</a>-->
+                            <!--<a href="#" class="text-light text-decoration-none small">Compliance</a>-->
+                        </div>
+                         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Privacy Policy Modal -->
+    <div class="modal fade" id="privacyModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Privacy Policy</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>BRONTOO TECHNOLOGY SOLUTIONS INDIA PVT. LTD. [BTSIPL], respects your privacy and is committed to protecting your information and privacy. This Privacy Policy is designed to help you understand how we may collect, process, store and use the information you provide to us and to assist you in making informed decision while using our Service. We also describe the measures we take to protect the security of the information and how you can contact us about our privacy practices.</p>
+                    <p>Date of updation: 14th December 2022.</p>
+                     <p>This legal agreement is an electronic record in terms of Information Technology Act, 2000, and rules there under as applicable and the amended provisions pertaining to electronic records in various statutes as amended by the Information Technology Act, 2000. This electronic record is generated by a computer system and does not require any physical or digital signatures for acceptance. This policy is pursuant to the provisions of Rule 4(1) of the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011 as may be amended from time to time.</p>
+                     <p>This privacy policy applies to all users of Osta  websites Osta  app.com, Brontoo.com and its integrated systems including but not limited to Osta  mobile app and Osta  payment platform. By clicking the “I accept/I agree” button or completing the registration process, you agree and acknowledge that you have carefully read this privacy policy and accepted this agreement.</p>
+                     
+                     <p>You are advised to read this Privacy Policy carefully. By accepting this Privacy Policy and the Terms and Conditions of Use, a User expressly consents to collection, storage, use and disclosure of his information as described herein. If you do not feel comfortable with any part of this Privacy Policy or our Terms of Service, you must not use or access our Service or download, install and/or use the mobile application.</p>
+                     <p><b>DEFINITIONS</b></p>
+                     <p>BTSIPL shall mean and includes its affiliates and subsidiaries.</p>
+                     <p>"User": shall mean and include a person who registers himself on the BTSIPL platform to transact or avails all or any of BTSIPL services this can include an individual resident in India or entity or company registered in India.</p>
+                     <p>The terms "WE", “OUR” and "US" refer to BTSIPL and the terms "YOU", "YOUR" and “USER” refer to you, as a user of BTSIPL.</p>
+                     <p>The term "PERSONAL INFORMATION" means information that you provide to us which personally identifies you to be contacted or identified, such as your name, phone number, email address, and any other data that is tied to such information. Our practices and procedures in relation to the collection and use of Personal Information have been set-out below in order to ensure safe usage of the Website for you.</p>
+                     
+                    <p>BTSIPL Associates shall mean such entities that provide joint services with BTSIPL, including banks, aggregators and providers of payment gateways or such other vendors engaged by BTSIPL to provides its services.</p>
+                    <p>BTSIPL Account/Services means any services, and all related BTSIPL platforms, applications and services offered to you by BTSIPL in connection with your BTSIPL Account</p>
+                     <p>Personal Data/Information means personal information that can be associated with an identified or identifiable person. “Personal Data” can include name, pOsta  l address (including billing and shipping addresses), telephone number, email address, credit card number, bank account number, other financial account information, date of birth, and government-issued credentials (e.g., driver’s license number, permanent account number Aadhar Number, passport etc.).</p>
+                     <p>Process means any method or manner in which we handle Personal Data whether or not by automated means, such as collection, recording, organization, structuring, storage, adaptation or alteration, retrieval, and consultation, disclosure by transmission, disseminating or erasure or destruction of Personal Data.</p>
+                     
+                     <p>Sites means the BTSIPL platforms, mobile applications, official social media platforms, or other online facilities through which BTSIPL offers the Services and which has posted or linked to this Privacy Policy.</p>
+                     
+                     <p><b>APPLICABILITY OF THIS POLICY</b></p>
+                     
+                     <p>This Privacy Policy applies to any information of the user when he access/visits our Sites or uses our Services and does not apply to online platforms or services that BTSIPL do not own or control, including platforms or services of third parties. BTSIPL’s privacy policy applies to use of the Platform application, desktop, BTSIPL platform and mobile WAP site, API, and all devices, functionalities, features, technologies and other services uniformly and its terms are made a part of these T&Cs by this reference. Additionally, by using our services, the user hereby expressly acknowledges and agree that Internet transmissions are never completely private or secure. The user understands that any message or information he sends to the Platform may be read or intercepted by others, even if there is a special notice that a particular transmission is encrypted.</p>
+                     
+                     
+                     <p>We do not knowingly collect or solicit personal information from anyone under the age of 18 or knowingly allow such persons to register for the Services (as that term is defined in our Terms of Use). If you are under 18, please do not attempt to register for the Services or provide any information about yourself to us. No one under age 18 may provide any personal information to us or on the Services. In the event that we learn that we have collected personal information from a child under the age of 18, we will delete that information as quickly as possible. If you believe that we might have any information from or about a child under 18, please contact us through email specified on our website.</p>
+                     
+                     <p>We gather various types of Personal Information from our users, as explained more fully below. We may use this Personal Information to personalize and improve our services, to allow our users to set up a user account and profile, to contact users, to fulfil your requests for certain products and services, to analyze how users utilize the Services, facilitate value added services and as otherwise set forth in this Privacy Policy. We may share certain types of Personal Information with third parties, as described below.</p>
+                     
+                     <p><b>USE OF PERSONAL INFORMATION</b></p>
+                     
+                     <p>We use personal information for varied reasons: -<br>
+1. To provide and improve the services you request<br>
+2. To perform creditworthiness and other financial standing checks, evaluate applications, and compare information for accuracy and verification purposes<br>
+3. Mark lien on the bank account provided by you<br>
+4. Enable you to make payment, transfer funds, withdraw money and other facilities.<br>
+5. Provide value added services such as summarised services, trends, loyalty programs etc.<br>
+6. To tailor and customize your experience at our BTSIPL platform<br>
+7. To provide you with content that we think you might be interested in and to display content according to your preferences<br>
+8. To resolve disputes, troubleshoot problems<br>
+9. To promote safe service<br>
+10. To measure consumer interest in our services<br>
+11. To inform you about online and offline offers, products, services and updates<br>
+12. To detect and protect against error, fraud and other criminal activity<br>
+13. To comply with the relevant laws and regulations and enforce the terms and Services</p>
+
+
+<p>When a User utilizes the BTSIPL platform or sends emails or other data, information or communication to BTSIPL or any of its accredited service providers or banks, the User agrees and understands that such information and data may be communicated through a third-party payment gateway controlled by a BTSIPL Associate through electronic records and an User consents to receive communications via electronic records from such BTSIPL Associate periodically. Upon registration with BTSIPL, a User agrees that he shall be contacted on his mobile or e mail address for authentication of a transaction or from time to time about updating his content to provide features which BTSIPL believes may benefit him or for the purpose of receiving promotional messages. A User's information shall remain with BTSIPL and BTSIPL Associates. BTSIPL does not sell or rent your personal information to anyone. In these types of transactions, customer information is typically one of the business assets that would be transferred. Further, if we (or our assets) are acquired, or if we go out of business, enter bankruptcy, or go through some other change of control, Personal Information would be one of the assets transferred to or acquired by a third party. The user hereby confirms that he has no objection to aforesaid use of his information.</p>
+
+
+<p><b>DISCLOSURE OF INFORMATION</b></p>
+
+
+<p>BTSIPL may also share a User's personal information with any statutory or legal authority as may be required or mandated by that authority. BTSIPL may disclose personal information when required, such as to respond to legal requirements, enforce BTSIPL policies or protect anyone's rights, property, or safety. Such information will be disclosed in accordance with applicable laws and regulations. If required by law to do so or if considered necessary to do so for proper management of credit or business risk, BTSIPL reserves the right to disclose any and all such User information, including default in any payments or misuse of the service, to any court of competent jurisdiction, quasi-judicial authority, law enforcement agency, relevant wing of the Central Government or State Government, User's bank, credit reference agency, financial institution or any company which is an affiliate or associate or parent or subsidiary of BTSIPL.</p>
+
+
+
+
+<p>BTSIPL shall not sell or rent a User's personal information to third parties for their marketing purposes without his explicit consent. BTSIPL shall comply with the DND regulations as framed and applicable from time to time. BTSIPL will only disclose your information in accordance with this Privacy Policy. If there is a requirement to use it for any other purpose, the consent of the user will be obtained. We have no control over the policies and practices of third-party websites or businesses as to privacy or anything else, so if you choose to take part in any transaction or service relating to an affiliated website or business, please review all such businesses or websites’ policies.</p>
+
+
+<p>We reserve the right to access, read, preserve, and disclose any information that we reasonably believe is necessary to comply with law or court order; enforce or apply our conditions of use and other agreements; or protect the rights, property, or safety of Company, our employees, our users, or others. This includes exchanging information with other companies and organizations for fraud protection and credit risk reduction.</p>
+
+
+<p><b>LOG DATA</b></p>
+
+
+<p>Like many site operators, we collect information that your browser sends whenever you visit our Site ("Log Data").</p>
+
+<p>This Log Data may include information such as your computer's Internet Protocol ("IP") address, browser type, browser version, the pages of our Site that you visit, the time and date of your visit, the time spent on those pages and other statistics.</p>
+
+
+<p>In addition, we may use third party services such as Google Analytics that collect, monitor and analyse this</p>
+
+
+<p><b>COMMUNICATIONS</b></p>
+
+<p>We may use your Personal Information to contact you with newsletters, marketing or promotional materials and other information that are relevant to use of our solution to you.</p>
+
+<p><b>COOKIES</b></p>
+
+
+<p>The term "cookies" refers to small pieces of information that a website sends to your computer's hard drive while you are viewing the site. We may use both session cookies (which expire once you close your browser) and persistent cookies (which stay on your computer until you delete them). Persistent cookies can be removed by following your browser help file directions. If you choose to disable cookies, some areas of BTSIPL may not work properly or at all. BTSIPL may use third party tools, who may collect anonymous information about your visits to BTSIPL using cookies, and interaction with BTSIPL products and services. Such third parties may also use information about your visits to BTSIPL products and services and other web sites to target advertisements for BTSIPL's products and services. No Personal Information is collected or used in this process. BTSIPL Users can opt-out of sharing this information with third parties by deactivating cookies, the process of which varies from browser to browser. Please refer to the help file of your browser to understand the process of deactivating cookies on your browser.</p>
+
+<b>SECURITY</b>
+
+
+<p>The security of your Personal Information is important to us, however no method of transmission over the Internet, or method of electronic storage, is 100% secure. While we strive to use commercially acceptable means to protect your Personal Information, we cannot guarantee its absolute security.</p>
+
+<p>Our platform has stringent security measures in place to protect the loss, misuse, and alteration of the information under our control. Whenever you change or access your account information, we offer the use of a secure server. Once your information is in our possession, we adhere to strict security guidelines, protecting it against unauthorized access.</p>
+
+<p>Once your information is in our possession, we adhere to strict security guidelines, protecting it against unauthorized access. While we are dedicated to securing our systems and Services, you are responsible for securing and maintaining the privacy of your password(s) and Account/profile registration information and verifying that the Personal Data we maintain about you is accurate and current. We are not responsible for protecting any Personal Data that we share with a third-party based on an account connection that you have authorized.</p>
+
+<p>The BTSIPL platform includes links to other platforms. Such platforms are governed by their respective privacy policies, which are beyond BTSIPL's control. Once a User leaves the BTSIPL/ BTSIPL Associate servers, use of any information provided by the User is governed by the privacy policy of the operator of the site which the User is visiting. That policy may differ from this BTSIPL policy. All information gathered on the BTSIPL platform is securely stored and access to such information is strictly limited based on need-to-know basis. In addition, details of a User's credit/ debit card number, PIN details for payment or for verification purposes, password and account information are encrypted by BTSIPL in accordance with the highest standards.</p>
+
+
+<p><b>AMENDMENT/CHANGES TO THIS PRIVACY POLICY</b></p>
+
+<p>This Privacy Policy is effective from the date of your acceptance and will remain in effect except with respect to any changes in its provisions in future, which will be in effect immediately after being posted on this page.</p>
+
+<p>We reserve the right to update or change our Privacy Policy at any time and you should check this Privacy Policy periodically. Your continued use of the Service after we post any modifications to the Privacy Policy on this page will constitute your acknowledgment of the modifications and your consent to abide and be bound by the modified Privacy Policy.</p>
+
+<p>If we make any material changes to this Privacy Policy, we will notify you either through the email address you have provided to us, or by placing a prominent notice on our website.</p>
+
+
+
+
+
+<p><b>APPLICABLE LAWS</b></p>
+
+<p>Your use of this Website, app etc. will be governed by and construed in accordance with the laws of India. The Users agree that any legal action or proceedings arising out of your use may be brought exclusively in the competent courts/ tribunals having jurisdiction in Mumbai in India and irrevocably submit themselves to the jurisdiction of such courts/ tribunals.</p>
+
+
+
+<p><b>CONTACT US</b></p>
+
+<p>If you have any questions or comments about this Privacy Policy or if you would like us to update information, we have about you, please contact us through the email specified on our website.</p>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Terms of Service Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Terms of Service</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                   <p><b>BRONTOO TECHNOLOGY SOLUTIONS INDIA PVT. LTD. [BTSIPL]</b> respects your privacy and is committed to protecting your information and privacy. 
+This Privacy Policy is designed to help you understand how we may collect, process, store and use the information you provide to us 
+and to assist you in making informed decisions while using our Service. 
+We also describe the measures we take to protect the security of the information and how you can contact us about our privacy practices.</p>
+
+<p><b>Date of updation:</b> 14th December 2022.</p>
+
+<p>This legal agreement is an electronic record in terms of <b>Information Technology Act, 2000</b>, and rules there under as applicable 
+and the amended provisions pertaining to electronic records in various statutes as amended by the Information Technology Act, 2000. 
+This electronic record is generated by a computer system and does not require any physical or digital signatures for acceptance. 
+This policy is pursuant to the provisions of <b>Rule 4(1)</b> of the Information Technology 
+(Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011 as may be amended from time to time.</p>
+
+<p>This privacy policy applies to all users of <b>Osta  websites Osta  app.com, Brontoo.com</b> and its integrated systems including but not limited to Osta  mobile app and Osta  payment platform. 
+By clicking the <b>“I accept/I agree”</b> button or completing the registration process, you agree and acknowledge that you have carefully read this privacy policy and accepted this agreement.</p>
+
+<p>You are advised to read this Privacy Policy carefully. By accepting this Privacy Policy and the <b>Terms and Conditions of Use</b>, 
+a User expressly consents to collection, storage, use and disclosure of his information as described herein. 
+If you do not feel comfortable with any part of this Privacy Policy or our Terms of Service, you must not use or access our Service 
+or download, install and/or use the mobile application.</p>
+
+<br>
+
+<p><b>DEFINITIONS</b></p>
+<p><b>BTSIPL</b> shall mean and includes its affiliates and subsidiaries.</p>
+<p><b>User:</b> shall mean and include a person who registers himself on the BTSIPL platform to transact or avails all or any of BTSIPL services. 
+This can include an individual resident in India or entity or company registered in India.</p>
+<p>The terms <b>"WE", “OUR” and "US"</b> refer to BTSIPL and the terms <b>"YOU", "YOUR" and “USER”</b> refer to you, as a user of BTSIPL.</p>
+<p>The term <b>"PERSONAL INFORMATION"</b> means information that you provide to us which personally identifies you to be contacted or identified, 
+such as your name, phone number, email address, and any other data that is tied to such information. 
+Our practices and procedures in relation to the collection and use of Personal Information have been set out below in order to ensure safe usage of the Website for you.</p>
+<p><b>BTSIPL Associates</b> shall mean such entities that provide joint services with BTSIPL, including banks, aggregators and providers of payment gateways 
+or such other vendors engaged by BTSIPL to provide its services.</p>
+<p><b>BTSIPL Account/Services</b> means any services, and all related BTSIPL platforms, applications and services offered to you by BTSIPL in connection with your BTSIPL Account.</p>
+<p><b>Personal Data/Information</b> means personal information that can be associated with an identified or identifiable person. 
+“Personal Data” can include name, pOsta  l address (including billing and shipping addresses), telephone number, email address, credit card number, 
+bank account number, other financial account information, date of birth, and government-issued credentials (e.g., driver’s license number, 
+permanent account number, Aadhar Number, passport etc.).</p>
+<p><b>Process</b> means any method or manner in which we handle Personal Data whether or not by automated means, such as collection, 
+recording, organization, structuring, storage, adaptation or alteration, retrieval, consultation, disclosure by transmission, dissemination 
+or erasure or destruction of Personal Data.</p>
+<p><b>Sites</b> means the BTSIPL platforms, mobile applications, official social media platforms, or other online facilities through which BTSIPL offers the Services and which has posted or linked to this Privacy Policy.</p>
+
+<br>
+
+<p><b>APPLICABILITY OF THIS POLICY</b></p>
+<p>This Privacy Policy applies to any information of the user when he accesses/visits our Sites or uses our Services and does not apply to 
+online platforms or services that BTSIPL does not own or control, including platforms or services of third parties. 
+BTSIPL’s privacy policy applies to use of the Platform application, desktop, BTSIPL platform and mobile WAP site, API, 
+and all devices, functionalities, features, technologies and other services uniformly and its terms are made a part of these T&Cs by this reference.</p>
+
+<p>Additionally, by using our services, the user hereby expressly acknowledges and agrees that Internet transmissions are never completely private or secure. 
+The user understands that any message or information he sends to the Platform may be read or intercepted by others, 
+even if there is a special notice that a particular transmission is encrypted.</p>
+
+<p><b>We do not knowingly collect or solicit personal information from anyone under the age of 18</b> or knowingly allow such persons to register for the Services. 
+If you are under 18, please do not attempt to register for the Services or provide any information about yourself to us. 
+No one under age 18 may provide any personal information to us or on the Services. 
+In the event that we learn that we have collected personal information from a child under the age of 18, 
+we will delete that information as quickly as possible. If you believe that we might have any information from or about a child under 18, 
+please contact us through the email specified on our website.</p>
+
+<br>
+
+<p><b>INFORMATION WE COLLECT</b></p>
+<p>We may collect personal and non-personal information about you in connection with your use of our Sites and Services.</p>
+<p><b>Personal Information:</b> Includes details like your name, address, phone number, email, payment details, and government-issued documents for KYC verification.</p>
+<p><b>Non-Personal Information:</b> Includes technical details such as IP address, browser type, operating system, and information about your use of our Services.</p>
+
+<br>
+
+<p><b>USE OF INFORMATION</b></p>
+<p>We may use the information we collect for the following purposes:</p>
+<ul>
+  <li>To provide, maintain, and improve our Services.</li>
+  <li>To process transactions and send you related information, including confirmations and invoices.</li>
+  <li>To verify identity and perform KYC as per regulatory requirements.</li>
+  <li>To personalize your experience and provide content that matches your interests.</li>
+  <li>To communicate with you, including sending promotional messages, updates, and technical notices.</li>
+  <li>To protect against fraud, unauthorized transactions, and other illegal activities.</li>
+</ul>
+
+<br>
+
+<p><b>DISCLOSURE OF INFORMATION</b></p>
+<p>We may share your information with:</p>
+<ul>
+  <li><b>BTSIPL Associates</b> and partners to provide Services.</li>
+  <li>Regulatory authorities or law enforcement agencies as required by law.</li>
+  <li>Service providers and vendors who assist us in delivering our Services.</li>
+</ul>
+
+<br>
+
+<p><b>SECURITY</b></p>
+<p>We employ industry-standard measures to safeguard your personal information against unauthorized access, disclosure, alteration, or destruction. 
+However, no method of transmission over the Internet is 100% secure, and we cannot guarantee absolute security.</p>
+
+<br>
+
+<p><b>YOUR RIGHTS</b></p>
+<p>You may request access, correction, or deletion of your personal data. 
+You may also withdraw your consent for processing your information at any time by contacting us. 
+Please note that withdrawing consent may affect your ability to use certain features of our Services.</p>
+
+<br>
+
+<p><b>CHANGES TO THIS PRIVACY POLICY</b></p>
+<p>We may update this Privacy Policy from time to time. 
+We encourage you to review this page periodically for the latest information on our privacy practices. 
+Continued use of our Services after changes are made will constitute your acceptance of those changes.</p>
+
+<br>
+
+<p><b>CONTACT US</b></p>
+<p>If you have any questions or concerns regarding this Privacy Policy, please contact us at:</p>
+<p>Email: <a href="mailto:contact@ostaapp.com ">contact@ostaapp.com </a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
